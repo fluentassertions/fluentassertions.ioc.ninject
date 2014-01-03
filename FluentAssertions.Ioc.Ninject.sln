@@ -11,6 +11,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{2D35AF
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentAssertions.Ioc.Ninject.Tests", "src\FluentAssertions.Ioc.Ninject.Tests\FluentAssertions.Ioc.Ninject.Tests.csproj", "{D5A95789-04BC-4ADD-871F-D7073EB85A9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentAssertions.Ioc.Samples.Core", "src\FluentAssertions.Ioc.Samples.Core\FluentAssertions.Ioc.Samples.Core.csproj", "{789DEF70-FAD8-431F-B2BA-0C2A21F5C161}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentAssertions.Ioc.Samples.Interfaces", "src\FluentAssertions.Ioc.Samples.Interfaces\FluentAssertions.Ioc.Samples.Interfaces.csproj", "{B113663C-3031-4D08-9755-ED73D901ACB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentAssertions.Ioc.Samples.Data", "src\FluentAssertions.Ioc.Samples.Data\FluentAssertions.Ioc.Samples.Data.csproj", "{BFFF0D07-65E9-48C0-8AEB-3047B4EDF39C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentAssertions.Ioc.Samples.Entities", "src\FluentAssertions.Ioc.Samples.Entities\FluentAssertions.Ioc.Samples.Entities.csproj", "{E43560ED-E4AA-42C0-AA9C-5830DBF57531}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +31,26 @@ Global
 		{AD22C140-1E9F-4D70-9B01-34E18915009A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD22C140-1E9F-4D70-9B01-34E18915009A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD22C140-1E9F-4D70-9B01-34E18915009A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5A95789-04BC-4ADD-871F-D7073EB85A9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5A95789-04BC-4ADD-871F-D7073EB85A9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5A95789-04BC-4ADD-871F-D7073EB85A9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5A95789-04BC-4ADD-871F-D7073EB85A9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{789DEF70-FAD8-431F-B2BA-0C2A21F5C161}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{789DEF70-FAD8-431F-B2BA-0C2A21F5C161}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{789DEF70-FAD8-431F-B2BA-0C2A21F5C161}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{789DEF70-FAD8-431F-B2BA-0C2A21F5C161}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B113663C-3031-4D08-9755-ED73D901ACB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B113663C-3031-4D08-9755-ED73D901ACB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B113663C-3031-4D08-9755-ED73D901ACB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B113663C-3031-4D08-9755-ED73D901ACB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFFF0D07-65E9-48C0-8AEB-3047B4EDF39C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFFF0D07-65E9-48C0-8AEB-3047B4EDF39C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFFF0D07-65E9-48C0-8AEB-3047B4EDF39C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFFF0D07-65E9-48C0-8AEB-3047B4EDF39C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E43560ED-E4AA-42C0-AA9C-5830DBF57531}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E43560ED-E4AA-42C0-AA9C-5830DBF57531}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E43560ED-E4AA-42C0-AA9C-5830DBF57531}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E43560ED-E4AA-42C0-AA9C-5830DBF57531}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
