@@ -51,8 +51,8 @@ namespace FluentAssertions.Ioc.Ninject
             }
 
             // Assert
-            Execute.Verification.ForCondition(failed.Count() == 0)
-                                .FailWith(BuildFailureMessage(failed));
+            Execute.Assertion.ForCondition(failed.Count() == 0)
+                             .FailWith(BuildFailureMessage(failed));
         }
 
         public void WithAtLeastOneInstance()
@@ -82,8 +82,8 @@ namespace FluentAssertions.Ioc.Ninject
             }
 
             // Assert
-            Execute.Verification.ForCondition(failed.Count() == 0)
-                                .FailWith(BuildFailureMessage(failed));
+            Execute.Assertion.ForCondition(failed.Count() == 0)
+                             .FailWith(BuildFailureMessage(failed));
         }
 
         private string BuildFailureMessage(List<ActivationError> failed)

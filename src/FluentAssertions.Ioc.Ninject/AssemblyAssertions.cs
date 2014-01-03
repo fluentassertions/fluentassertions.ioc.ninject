@@ -20,7 +20,7 @@ namespace FluentAssertions.Ioc.Ninject
 
             var references = Subject.GetReferencedAssemblies().Select(x => x.Name);
 
-            Execute.Verification
+            Execute.Assertion
                 .ForCondition(!references.Any(x => x == assemblyName))
                 .FailWith("Assembly {0} should not reference assembly {1}", subjectName, assemblyName);
         }
