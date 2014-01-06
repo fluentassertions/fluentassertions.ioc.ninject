@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentAssertions.Ioc.Sample
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentAssertions.Ioc.Samples.Entities", "src\FluentAssertions.Ioc.Samples.Entities\FluentAssertions.Ioc.Samples.Entities.csproj", "{E43560ED-E4AA-42C0-AA9C-5830DBF57531}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{2EC05648-5418-4209-A0B2-231109B4177E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -54,5 +56,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{789DEF70-FAD8-431F-B2BA-0C2A21F5C161} = {2EC05648-5418-4209-A0B2-231109B4177E}
+		{BFFF0D07-65E9-48C0-8AEB-3047B4EDF39C} = {2EC05648-5418-4209-A0B2-231109B4177E}
+		{E43560ED-E4AA-42C0-AA9C-5830DBF57531} = {2EC05648-5418-4209-A0B2-231109B4177E}
+		{B113663C-3031-4D08-9755-ED73D901ACB3} = {2EC05648-5418-4209-A0B2-231109B4177E}
 	EndGlobalSection
 EndGlobal
