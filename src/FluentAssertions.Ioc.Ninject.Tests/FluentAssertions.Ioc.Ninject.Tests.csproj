@@ -67,6 +67,10 @@
       <Project>{BFFF0D07-65E9-48C0-8AEB-3047B4EDF39C}</Project>
       <Name>FluentAssertions.Ioc.Samples.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\FluentAssertions.Ioc.Samples.Entities\FluentAssertions.Ioc.Samples.Entities.csproj">
+      <Project>{E43560ED-E4AA-42C0-AA9C-5830DBF57531}</Project>
+      <Name>FluentAssertions.Ioc.Samples.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
