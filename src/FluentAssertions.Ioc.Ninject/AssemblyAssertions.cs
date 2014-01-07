@@ -57,7 +57,7 @@ namespace FluentAssertions.Ioc.Ninject
         }
 
         /// <summary>
-        /// Asserts that an assembly references the specifed assembly.
+        /// Asserts that an assembly references the specified assembly.
         /// </summary>
         /// <param name="assembly">The assembly which should be referenced.</param>
         /// <param name="reason">
