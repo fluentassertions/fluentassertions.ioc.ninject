@@ -27,6 +27,10 @@ namespace FluentAssertions.Ioc.Ninject
             return types.Where(x => x.Name != typeof(T).Name);
         }
 
+        /// <summary>
+        /// Returns an <see cref="AssemblyAssertions"/> object that can be used to assert the
+        /// current <see cref="Assembly"/>.
+        /// </summary>
         public static AssemblyAssertions Should(this Assembly assembly)
         {
             return new AssemblyAssertions(assembly);
