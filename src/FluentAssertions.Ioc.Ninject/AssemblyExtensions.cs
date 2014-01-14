@@ -27,6 +27,11 @@ namespace FluentAssertions.Ioc.Ninject
             return types.Where(x => x.Name != typeof(T).Name);
         }
 
+        public static IEnumerable<Type> EndingWith(this IEnumerable<Type> types, string endingWith)
+        {
+            return types.Where(x => x.Name.EndsWith(endingWith));
+        }
+
         /// <summary>
         /// Returns an <see cref="AssemblyAssertions"/> object that can be used to assert the
         /// current <see cref="Assembly"/>.

@@ -1,8 +1,9 @@
 ﻿using FluentAssertions.Ioc.Samples.Core;
+using FluentAssertions.Ioc.Samples.Interfaces;
 
 namespace FluentAssertions.Ioc.Samples.Data
 {
-    public class SampleRepository
+    public class SampleRepository : ISampleRepository
     {
         public void SomeMethod()
         {

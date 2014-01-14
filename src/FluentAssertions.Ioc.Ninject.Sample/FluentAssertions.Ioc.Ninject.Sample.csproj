@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B113663C-3031-4D08-9755-ED73D901ACB3}</ProjectGuid>
+    <ProjectGuid>{3857B7DD-45EA-4AC3-97D3-CE9DBB9B64BD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FluentAssertions.Ioc.Samples.Interfaces</RootNamespace>
-    <AssemblyName>FluentAssertions.Ioc.Samples.Interfaces</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <RootNamespace>FluentAssertions.Ioc.Ninject.Sample</RootNamespace>
+    <AssemblyName>FluentAssertions.Ioc.Ninject.Sample</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -30,6 +30,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Ninject, Version=3.0.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Ninject.3.0.1.10\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Extensions.Conventions">
+      <HintPath>..\..\packages\Ninject.Extensions.Conventions.3.0.0.11\lib\net45-full\Ninject.Extensions.Conventions.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -39,12 +46,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IFooService.cs" />
-    <Compile Include="ISampleRepository.cs" />
-    <Compile Include="ISampleService.cs" />
-    <Compile Include="ISomeFactory.cs" />
-    <Compile Include="ISomeProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SampleModule.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FluentAssertions.Ioc.Samples.Core\FluentAssertions.Ioc.Samples.Core.csproj">
+      <Project>{789DEF70-FAD8-431F-B2BA-0C2A21F5C161}</Project>
+      <Name>FluentAssertions.Ioc.Samples.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FluentAssertions.Ioc.Samples.Data\FluentAssertions.Ioc.Samples.Data.csproj">
+      <Project>{BFFF0D07-65E9-48C0-8AEB-3047B4EDF39C}</Project>
+      <Name>FluentAssertions.Ioc.Samples.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FluentAssertions.Ioc.Samples.Interfaces\FluentAssertions.Ioc.Samples.Interfaces.csproj">
+      <Project>{B113663C-3031-4D08-9755-ED73D901ACB3}</Project>
+      <Name>FluentAssertions.Ioc.Samples.Interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

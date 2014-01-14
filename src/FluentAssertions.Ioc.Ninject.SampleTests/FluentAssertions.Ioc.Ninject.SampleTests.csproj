@@ -30,10 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FluentAssertions">
+    <Reference Include="FluentAssertions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\FluentAssertions.2.2.0.0\lib\net45\FluentAssertions.dll</HintPath>
     </Reference>
-    <Reference Include="Ninject">
+    <Reference Include="Ninject, Version=3.0.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Ninject.3.0.1.10\lib\net45-full\Ninject.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
@@ -48,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IocTests.cs" />
     <Compile Include="LayerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -55,6 +58,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FluentAssertions.Ioc.Ninject.Sample\FluentAssertions.Ioc.Ninject.Sample.csproj">
+      <Project>{3857B7DD-45EA-4AC3-97D3-CE9DBB9B64BD}</Project>
+      <Name>FluentAssertions.Ioc.Ninject.Sample</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FluentAssertions.Ioc.Ninject\FluentAssertions.Ioc.Ninject.csproj">
       <Project>{AD22C140-1E9F-4D70-9B01-34E18915009A}</Project>
       <Name>FluentAssertions.Ioc.Ninject</Name>
@@ -70,6 +77,10 @@
     <ProjectReference Include="..\FluentAssertions.Ioc.Samples.Entities\FluentAssertions.Ioc.Samples.Entities.csproj">
       <Project>{E43560ED-E4AA-42C0-AA9C-5830DBF57531}</Project>
       <Name>FluentAssertions.Ioc.Samples.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FluentAssertions.Ioc.Samples.Interfaces\FluentAssertions.Ioc.Samples.Interfaces.csproj">
+      <Project>{B113663C-3031-4D08-9755-ED73D901ACB3}</Project>
+      <Name>FluentAssertions.Ioc.Samples.Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

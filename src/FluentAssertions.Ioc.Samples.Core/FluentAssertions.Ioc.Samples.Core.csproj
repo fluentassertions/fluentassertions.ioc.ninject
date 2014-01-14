@@ -40,12 +40,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\BarProvider.cs" />
+    <Compile Include="Providers\FooProvider.cs" />
     <Compile Include="SampleService.cs" />
+    <Compile Include="FooService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FluentAssertions.Ioc.Samples.Entities\FluentAssertions.Ioc.Samples.Entities.csproj">
       <Project>{E43560ED-E4AA-42C0-AA9C-5830DBF57531}</Project>
       <Name>FluentAssertions.Ioc.Samples.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FluentAssertions.Ioc.Samples.Interfaces\FluentAssertions.Ioc.Samples.Interfaces.csproj">
+      <Project>{B113663C-3031-4D08-9755-ED73D901ACB3}</Project>
+      <Name>FluentAssertions.Ioc.Samples.Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
