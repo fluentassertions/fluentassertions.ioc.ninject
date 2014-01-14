@@ -5,6 +5,9 @@ using FluentAssertions.Execution;
 
 namespace FluentAssertions.Ioc.Ninject
 {
+    /// <summary>
+    /// Contains a number of methods to assert that a <see cref="Assembly"/> is in the expected state.
+    /// </summary>
     public class AssemblyAssertions
     {
         protected internal AssemblyAssertions(Assembly assembly)
@@ -12,6 +15,9 @@ namespace FluentAssertions.Ioc.Ninject
             Subject = assembly;
         }
 
+        /// <summary>
+        /// Gets the assembly which is being asserted.
+        /// </summary>
         public Assembly Subject { get; private set; }
 
         /// <summary>

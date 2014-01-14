@@ -7,6 +7,9 @@ using Ninject;
 
 namespace FluentAssertions.Ioc.Ninject
 {
+    /// <summary>
+    /// Contains a number of methods to assert that a <see cref="IKernel"/> is in the expected state.
+    /// </summary>
     public class KernelAssertions
     {
         protected internal KernelAssertions(IKernel kernel)
@@ -14,21 +17,40 @@ namespace FluentAssertions.Ioc.Ninject
             Subject = kernel;
         }
 
+        /// <summary>
+        /// Gets the kernel which is being asserted.
+        /// </summary>
         public IKernel Subject { get; private set; }
+
+        /// <summary>
+        /// Gets the interfaces which trying to be resolved.
+        /// </summary>
         private IEnumerable<Type> Interfaces { get; set; }
 
+        /// <summary>
+        /// Specifies the interfaces to try resolving from the kernel.
+        /// </summary>
+        /// <param name="interfaces">The interfaces to resolve.</param>
         public KernelAssertions ResolveInterfaces(IEnumerable<Type> interfaces)
         {
             Interfaces = interfaces;
             return this;
         }
 
-        public KernelAssertions ResolveInterface<TInferface>()
+        /// <summary>
+        /// Specifies the interface to try resolving from the kernel.
+        /// </summary>
+        /// <typeparam name="TInterface">The interface to resolve.</typeparam>
+        /// <returns></returns>
+        public KernelAssertions ResolveInterface<TInterface>()
         {
-            Interfaces = new List<Type>() { typeof(TInferface) };
+            Interfaces = new List<Type>() { typeof(TInterface) };
             return this;
         }
 
+        /// <summary>
+        /// Asserts that the selected interface(s) can be resolved with a single instance.
+        /// </summary>
         public void WithSingleInstance()
         {
             var failed = new List<ActivationError>();
@@ -55,6 +77,9 @@ namespace FluentAssertions.Ioc.Ninject
                              .FailWith(BuildFailureMessage(failed));
         }
 
+        /// <summary>
+        /// Asserts that the selected interface(s) can be resolved with at least one instance.
+        /// </summary>
         public void WithAtLeastOneInstance()
         {
             var failed = new List<ActivationError>();
