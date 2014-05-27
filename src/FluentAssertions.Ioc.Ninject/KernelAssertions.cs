@@ -60,11 +60,8 @@ namespace FluentAssertions.Ioc.Ninject
             {
                 try
                 {
-                    if (type.IsGenericTypeDefinition)
-                        // TODO: We need to deal with generic interfaces.
-                        continue;
-                    else
-                        Subject.Get(type);
+                    Subject.Get(type);
+                        
                 }
                 catch (ActivationException ex)
                 {
@@ -89,16 +86,11 @@ namespace FluentAssertions.Ioc.Ninject
             {
                 try
                 {
-                    if (type.IsGenericTypeDefinition)
-                        // TODO: We need to deal with generic interfaces.
-                        continue;
-                    else
+                    var instances = Subject.GetAll(type);
+                    if (!instances.Any())
                     {
-                        var instances = Subject.GetAll(type);
-                        if (!instances.Any())
-                            failed.Add(new ActivationError() { Type = type });
+                        failed.Add(new ActivationError() { Type = type });
                     }
-                    
                 }
                 catch (ActivationException ex)
                 {
