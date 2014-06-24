@@ -23,40 +23,40 @@ namespace FluentAssertions.Ioc.Ninject
         public IKernel Subject { get; private set; }
 
         /// <summary>
-        /// Gets the interfaces which trying to be resolved.
+        /// Gets the types to be resolved.
         /// </summary>
-        private IEnumerable<Type> Interfaces { get; set; }
+        private IEnumerable<Type> Types { get; set; }
 
         /// <summary>
-        /// Specifies the interfaces to try resolving from the kernel.
+        /// Specifies the types to try resolving from the kernel.
         /// </summary>
-        /// <param name="interfaces">The interfaces to resolve.</param>
-        public KernelAssertions ResolveInterfaces(IEnumerable<Type> interfaces)
+        /// <param name="types">The types to resolve.</param>
+        public KernelAssertions Resolve(IEnumerable<Type> types)
         {
-            Interfaces = interfaces;
+            Types = types;
             return this;
         }
 
         /// <summary>
-        /// Specifies the interface to try resolving from the kernel.
+        /// Specifies the type to try resolving from the kernel.
         /// </summary>
-        /// <typeparam name="TInterface">The interface to resolve.</typeparam>
+        /// <typeparam name="T">The type to resolve.</typeparam>
         /// <returns></returns>
-        public KernelAssertions ResolveInterface<TInterface>()
+        public KernelAssertions Resolve<T>()
         {
-            Interfaces = new List<Type>() { typeof(TInterface) };
+            Types = new List<Type>() { typeof(T) };
             return this;
         }
 
         /// <summary>
-        /// Asserts that the selected interface(s) can be resolved with a single instance.
+        /// Asserts that the selected type(s) can be resolved with a single instance.
         /// </summary>
         public void WithSingleInstance()
         {
             var failed = new List<ActivationError>();
 
-            // Try to activate each interface in the list
-            foreach (var type in Interfaces)
+            // Try to activate each type in the list
+            foreach (var type in Types)
             {
                 try
                 {
@@ -82,7 +82,7 @@ namespace FluentAssertions.Ioc.Ninject
             var failed = new List<ActivationError>();
 
             // Try to activate each interface in the list
-            foreach (var type in Interfaces)
+            foreach (var type in Types)
             {
                 try
                 {
@@ -107,7 +107,7 @@ namespace FluentAssertions.Ioc.Ninject
         {
             // Build the failure message
             var builder = new StringBuilder();
-            builder.AppendLine("The following interfaces could not be resolved:").AppendLine();
+            builder.AppendLine("The following types could not be resolved:").AppendLine();
             
             foreach (var error in failed)
                 builder.AppendFormat(" - {0}", error.Type.FullName).AppendLine();

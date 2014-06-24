@@ -23,7 +23,7 @@ namespace FluentAssertions.Ioc.Ninject.SampleTests
                                                                       .EndingWith("Service");
 
             // Assert
-            kernel.Should().ResolveInterfaces(interfaces).WithSingleInstance();
+            kernel.Should().Resolve(interfaces).WithSingleInstance();
         }
 
         [Test]
@@ -35,7 +35,7 @@ namespace FluentAssertions.Ioc.Ninject.SampleTests
                                                                      .EndingWith("Provider");
 
             // Assert
-            kernel.Should().ResolveInterfaces(interfaces).WithAtLeastOneInstance();
+            kernel.Should().Resolve(interfaces).WithAtLeastOneInstance();
         }
         
         private IKernel GetKernel()
