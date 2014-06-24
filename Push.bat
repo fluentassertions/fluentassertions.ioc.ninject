@@ -1,0 +1,1 @@
+.nuget\nuget.exe push nuget\*.nupkg
