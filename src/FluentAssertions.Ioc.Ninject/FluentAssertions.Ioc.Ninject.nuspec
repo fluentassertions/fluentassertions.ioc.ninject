@@ -13,8 +13,5 @@
     <licenseUrl>https://raw.githubusercontent.com/kevinkuszyk/FluentAssertions.Ioc.Ninject/master/license.txt</licenseUrl>
     <projectUrl>https://github.com/kevinkuszyk/FluentAssertions.Ioc.Ninject</projectUrl>
     <tags>FluentAssertions Ninject IOC TDD Fluent Testing</tags>
-    <dependencies>
-      <dependency id="FluentAssertions" version="[3.0.107,3.1)" />
-    </dependencies>
   </metadata>
 </package>
