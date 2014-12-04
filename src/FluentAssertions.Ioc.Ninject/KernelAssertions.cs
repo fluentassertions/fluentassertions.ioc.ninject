@@ -103,6 +103,23 @@ namespace FluentAssertions.Ioc.Ninject
                              .FailWith(BuildFailureMessage(failed));
         }
 
+        /// <summary>
+        /// Asserts that the specified interface resolves to a concrete type.
+        /// </summary>
+        /// <typeparam name="T">The expected concrete type.</typeparam>
+        public void To<T>()
+        {
+            foreach (var type in Types)
+            {
+                var actual = Subject.Get(type).GetType();
+                var expected = typeof (T);
+
+                Execute.Assertion.ForCondition(actual == expected)
+                                 .FailWith("Expected interface {0} to resolve to type {1}, but found {2} instead", type.Name, expected.Name, actual.Name);
+                
+            }
+        }
+
         private string BuildFailureMessage(List<ActivationError> failed)
         {
             // Build the failure message

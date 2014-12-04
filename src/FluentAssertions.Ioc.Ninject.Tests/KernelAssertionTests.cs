@@ -1,5 +1,6 @@
 ﻿using System;
 using FluentAssertions.Ioc.Ninject.Sample;
+using FluentAssertions.Ioc.Samples.Core;
 using FluentAssertions.Ioc.Samples.Interfaces;
 using Ninject;
 using Ninject.Modules;
@@ -126,6 +127,32 @@ namespace FluentAssertions.Ioc.Ninject.Tests
             act.ShouldThrow<AssertionException>();
         }
 
+        [Test]
+        public void Should_pass_when_asserting_an_interface_resolves_to_concrete_implementation()
+        {
+            // Arrange
+            var kernel = GetKernel();
+            
+            // Act
+            Action act = () => kernel.Should().Resolve<IFooService>().To<FooService>();
+
+            // Assert
+            act.ShouldNotThrow<Exception>();
+        }
+
+        [Test]
+        public void Should_fail_when_asserting_an_interface_resolves_to_concrete_implementation()
+        {
+            // Arrange
+            var kernel = GetKernel();
+            
+            // Act
+            Action act = () => kernel.Should().Resolve<IFooService>().To<FooService2>();
+
+            // Assert
+            act.ShouldThrow<AssertionException>().And.Message.Should().Be(@"Expected interface ""IFooService"" to resolve to type ""FooService2"", but found ""FooService"" instead");
+        }
+
         private IKernel GetKernel()
         {
             var modules = new INinjectModule[]
@@ -134,6 +161,14 @@ namespace FluentAssertions.Ioc.Ninject.Tests
             };
 
             return new StandardKernel(modules);
+        }
+
+        public class FooService2 : IFooService
+        {
+            public void DoWork()
+            {
+                throw new NotImplementedException();
+            }
         }
                 
     }
