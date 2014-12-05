@@ -68,7 +68,7 @@ namespace FluentAssertions.Ioc.Ninject.Tests
         }
 
         [Test]
-        public void Should_succeed_when_asserting_interface_can_be_resolved_with_at_least_instance()
+        public void Should_succeed_when_asserting_interface_can_be_resolved_with_at_least_one_instance()
         {
             // Arrange
             var kernel = GetKernel();
@@ -81,7 +81,7 @@ namespace FluentAssertions.Ioc.Ninject.Tests
         }
 
         [Test]
-        public void Should_fail_when_asserting_interface_can_be_resolved_with_at_least_instance()
+        public void Should_fail_when_asserting_interface_can_be_resolved_with_at_least_one_instance()
         {
             // Arrange
             var kernel = GetKernel();
@@ -94,7 +94,7 @@ namespace FluentAssertions.Ioc.Ninject.Tests
         }
 
         [Test]
-        public void Should_succeed_when_asserting_interfaces_can_be_resolved_with_at_least_instance()
+        public void Should_succeed_when_asserting_interfaces_can_be_resolved_with_at_least_one_instance()
         {
             // Arrange
             var kernel = GetKernel();
@@ -109,7 +109,7 @@ namespace FluentAssertions.Ioc.Ninject.Tests
         }
 
         [Test]
-        public void Should_fail_when_asserting_interfaces_can_be_resolved_with_at_least_instance()
+        public void Should_fail_when_asserting_interfaces_can_be_resolved_with_at_least_one_instance()
         {
             // Arrange
             var kernel = GetKernel();
@@ -154,7 +154,7 @@ namespace FluentAssertions.Ioc.Ninject.Tests
         }
 
         [Test]
-        public void Should_pass_when_asserting_an_interface_resolves_to_concrete_implementation()
+        public void Should_succeed_when_asserting_an_interface_resolves_to_concrete_implementation()
         {
             // Arrange
             var kernel = GetKernel();
