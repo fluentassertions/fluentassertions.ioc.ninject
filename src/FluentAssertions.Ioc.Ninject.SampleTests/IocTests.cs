@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FluentAssertions.Ioc.Ninject.Sample;
+﻿using FluentAssertions.Ioc.Ninject.Sample;
+using FluentAssertions.Ioc.Samples.Core;
 using FluentAssertions.Ioc.Samples.Interfaces;
 using Ninject;
 using Ninject.Modules;
@@ -36,6 +32,16 @@ namespace FluentAssertions.Ioc.Ninject.SampleTests
 
             // Assert
             kernel.Should().Resolve(interfaces).WithAtLeastOneInstance();
+        }
+
+        [Test]
+        public void SampleService_resolves_to_expected_implementation()
+        {
+            // Arrange
+            var kernel = GetKernel();
+            
+            // Assert
+            kernel.Should().Resolve<ISampleService>().To<SampleService>();
         }
         
         private IKernel GetKernel()
