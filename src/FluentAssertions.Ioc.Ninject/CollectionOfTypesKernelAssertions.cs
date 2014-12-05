@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using FluentAssertions.Execution;
+using FluentAssertions.Formatting;
 using FluentAssertions.Ioc.Ninject.Internal;
 using Ninject;
 
@@ -66,14 +67,26 @@ namespace FluentAssertions.Ioc.Ninject
                              .FailWith(BuildFailureMessage(failed));
         }
         
-        private string BuildFailureMessage(List<ActivationError> failed)
+        private string BuildFailureMessage(IEnumerable<ActivationError> failed)
         {
             // Build the failure message
             var builder = new StringBuilder();
+            var exceptionBuilder = new StringBuilder();
             builder.AppendLine("The following types could not be resolved:").AppendLine();
-            
+
             foreach (var error in failed)
+            {
                 builder.AppendFormat(" - {0}", error.Type.FullName).AppendLine();
+
+                if (error.Exception != null)
+                {
+                    exceptionBuilder.AppendLine(Formatter.ToString(error.Exception));
+                    exceptionBuilder.AppendLine();
+                }
+            }
+
+            builder.AppendLine();
+            builder.AppendLine(exceptionBuilder.ToString());
             
             return builder.ToString();
         }

@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Text;
 using FluentAssertions.Execution;
+using FluentAssertions.Formatting;
 using FluentAssertions.Ioc.Ninject.Internal;
 using Ninject;
 
@@ -55,7 +57,18 @@ namespace FluentAssertions.Ioc.Ninject
 
         private string BuildFailureMessage(ActivationError error)
         {
-            return String.Format("Unable to resolve type {0}", error.Type.FullName);
+            var builder = new StringBuilder();
+
+            builder.AppendFormat("Unable to resolve type {0}.", error.Type.FullName);
+
+            if (error.Exception != null)
+            {
+                builder.AppendLine();
+                builder.AppendLine();
+                builder.Append(Formatter.ToString(error.Exception));    
+            }
+            
+            return builder.ToString();
         }
     }
 }
