@@ -68,6 +68,32 @@ namespace FluentAssertions.Ioc.Ninject.Tests
         }
 
         [Test]
+        public void Should_succeed_when_asserting_interface_can_be_resolved_with_at_least_instance()
+        {
+            // Arrange
+            var kernel = GetKernel();
+            
+            // Act
+            Action act = () => kernel.Should().Resolve<ISomeProvider>().WithAtLeastOneInstance();
+
+            // Assert
+            act.ShouldNotThrow<AssertionException>();
+        }
+
+        [Test]
+        public void Should_fail_when_asserting_interface_can_be_resolved_with_at_least_instance()
+        {
+            // Arrange
+            var kernel = GetKernel();
+            
+            // Act
+            Action act = () => kernel.Should().Resolve<ISomeFactory>().WithAtLeastOneInstance();
+
+            // Assert
+            act.ShouldThrow<AssertionException>();
+        }
+
+        [Test]
         public void Should_succeed_when_asserting_interfaces_can_be_resolved_with_at_least_instance()
         {
             // Arrange
