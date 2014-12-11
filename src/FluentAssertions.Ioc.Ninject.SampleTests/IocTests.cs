@@ -35,6 +35,26 @@ namespace FluentAssertions.Ioc.Ninject.SampleTests
         }
 
         [Test]
+        public void SampleService_can_be_resolved_with_a_single_instance()
+        {
+            // Arrange
+            var kernel = GetKernel();
+          
+            // Assert
+            kernel.Should().Resolve<ISampleService>().WithSingleInstance();
+        }
+
+        [Test]
+        public void Provider_can_be_resolved_with_at_least_one_instance()
+        {
+            // Arrange
+            var kernel = GetKernel();
+            
+            // Assert
+            kernel.Should().Resolve<ISomeProvider>().WithAtLeastOneInstance();
+        }
+
+        [Test]
         public void SampleService_resolves_to_expected_implementation()
         {
             // Arrange
