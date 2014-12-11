@@ -57,6 +57,8 @@ namespace FluentAssertions.Ioc.Ninject
 
         private string BuildFailureMessage(ActivationError error)
         {
+            if (error == null) return string.Empty;
+
             var builder = new StringBuilder();
 
             builder.AppendFormat("Unable to resolve type {0}.", error.Type.FullName);
