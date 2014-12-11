@@ -57,7 +57,10 @@ namespace FluentAssertions.Ioc.Ninject
 
         private string BuildFailureMessage(ActivationError error)
         {
-            if (error == null) return string.Empty;
+            if (error == null)
+            {
+                return string.Empty;
+            }
 
             var builder = new StringBuilder();
 
