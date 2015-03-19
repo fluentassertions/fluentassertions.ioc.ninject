@@ -9,7 +9,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Extensions for Fluent Assertions for testing Ninject bindings.</description>
     <releaseNotes>See https://github.com/kevinkuszyk/FluentAssertions.Ioc.Ninject/releases</releaseNotes>
-    <copyright>Copyright Kevin Kuszyk 2014</copyright>
+    <copyright>Copyright Kevin Kuszyk 2015</copyright>
     <licenseUrl>https://raw.githubusercontent.com/kevinkuszyk/FluentAssertions.Ioc.Ninject/master/license.txt</licenseUrl>
     <projectUrl>https://github.com/kevinkuszyk/FluentAssertions.Ioc.Ninject</projectUrl>
     <tags>FluentAssertions Ninject IOC TDD Fluent Testing</tags>

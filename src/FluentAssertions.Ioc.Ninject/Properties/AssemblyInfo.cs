@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Kevin Kuszyk")]
 [assembly: AssemblyProduct("FluentAssertions.Ioc.Ninject")]
-[assembly: AssemblyCopyright("Copyright © Kevin Kuszyk 2014")]
+[assembly: AssemblyCopyright("Copyright © Kevin Kuszyk 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
