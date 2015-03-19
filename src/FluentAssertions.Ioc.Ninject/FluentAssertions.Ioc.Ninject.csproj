@@ -61,6 +61,7 @@
     <Compile Include="KernelExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SingleTypeKernelAssertions.cs" />
+    <Compile Include="TypeExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="FluentAssertions.Ioc.Ninject.nuspec" />
