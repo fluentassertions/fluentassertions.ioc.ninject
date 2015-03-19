@@ -35,5 +35,15 @@ namespace FluentAssertions.Ioc.Ninject
         {
             return types.Where(x => x.Name.EndsWith(endingWith));
         }
+
+        /// <summary>
+        /// Filters to only include types which are derived from TBase.
+        /// </summary>
+        /// <typeparam name="TBase">The base class filtered types should derive from.</typeparam>
+        /// <param name="types">The types to filer.</param>
+        public static IEnumerable<Type> ThatDeriveFrom<TBase>(this IEnumerable<Type> types)
+        {
+            return types.Where(x => x.IsSubclassOf(typeof (TBase)));
+        }
     }
 }

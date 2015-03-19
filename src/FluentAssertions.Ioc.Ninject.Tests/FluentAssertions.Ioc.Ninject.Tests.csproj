@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="KernelAssertionTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TypeExtensionTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
