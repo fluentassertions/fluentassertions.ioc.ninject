@@ -1,10 +1,10 @@
-FluentAssertions.Ioc.Ninject
-============================
+# Fluent Assertions for Ninject
 
-Extensions methods for [Fluent Assertions](https://github.com/dennisdoomen/fluentassertions) for testing Ninject mappings.
+[![Build status](https://ci.appveyor.com/api/projects/status/kexyhqbklr5eea02?svg=true)](https://ci.appveyor.com/project/kevinkuszyk/fluentassertions-ioc-ninject)
 
-Why?
-====
+This repro contains the Fluent Assertions extensions for Ninject.  It is maintained by [@kevinkuszyk](https://github.com/kevinkuszyk).
+
+## Why?
 
 To test Ninject mappings using the [conventions extension](https://github.com/ninject/ninject.extensions.conventions) (or setup manually) are resolving.  Instead of finding out at runtime that your app won't run, you'll have a failing unit test instead.
 
@@ -24,8 +24,7 @@ public void Services_can_be_resolved_with_a_single_instance()
 }
 ````
 
-Installing
-==========
+## Installing
 
 Please install the NuGet package:
 
@@ -33,13 +32,10 @@ Please install the NuGet package:
 PM> Install-Package FluentAssertions.Ioc.Ninject
 ````
 
-Documentation
-=============
+## Documentation
 
-Please see the [sample tests](https://github.com/kevinkuszyk/FluentAssertions.Ioc.Ninject/blob/master/src/FluentAssertions.Ioc.Ninject.SampleTests/IocTests.cs)
+Please see the [sample tests](https://github.com/FluentAssertions/FluentAssertions.Ioc.Ninject/blob/master/src/FluentAssertions.Ioc.Ninject.SampleTests/IocTests.cs)
 
-Continuous Integration
-======================
+## Building
 
-[![Build status](https://ci.appveyor.com/api/projects/status/kexyhqbklr5eea02)](https://ci.appveyor.com/project/kevinkuszyk/fluentassertions-ioc-ninject)
-
+Simply clone this repro and build the `FluentAssertions.Ioc.Ninject.sln` solution.
