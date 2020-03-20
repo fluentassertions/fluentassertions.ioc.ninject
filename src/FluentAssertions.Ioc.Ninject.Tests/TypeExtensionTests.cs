@@ -15,7 +15,7 @@ namespace FluentAssertions.Ioc.Ninject.Tests
             var actual = FindAssembly.Containing<Foo>().GetTypes().ThatDeriveFrom<Foo>();
 
             // Assert
-            actual.ShouldBeEquivalentTo(expected);
+            actual.Should().BeEquivalentTo(expected);
         }
     }
 

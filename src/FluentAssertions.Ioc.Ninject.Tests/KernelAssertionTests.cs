@@ -23,7 +23,7 @@ namespace FluentAssertions.Ioc.Ninject.Tests
             Action act = () => kernel.Should().Resolve(interfaces).WithSingleInstance();
 
             // Assert
-            act.ShouldNotThrow();
+            act.Should().NotThrow();
         }
 
         [Test]
@@ -38,7 +38,7 @@ namespace FluentAssertions.Ioc.Ninject.Tests
             Action act = () => kernel.Should().Resolve(interfaces).WithSingleInstance();
 
             // Assert
-            act.ShouldThrow<AssertionException>();
+            act.Should().Throw<AssertionException>();
         }
 
         [Test]
@@ -51,7 +51,7 @@ namespace FluentAssertions.Ioc.Ninject.Tests
             Action act = () => kernel.Should().Resolve<ISampleService>().WithSingleInstance();
 
             // Assert
-            act.ShouldNotThrow();
+            act.Should().NotThrow();
         }
 
         [Test]
@@ -64,7 +64,7 @@ namespace FluentAssertions.Ioc.Ninject.Tests
             Action act = () => kernel.Should().Resolve<ISomeFactory>().WithSingleInstance();
 
             // Assert
-            act.ShouldThrow<AssertionException>();
+            act.Should().Throw<AssertionException>();
         }
 
         [Test]
@@ -77,7 +77,7 @@ namespace FluentAssertions.Ioc.Ninject.Tests
             Action act = () => kernel.Should().Resolve<ISomeProvider>().WithAtLeastOneInstance();
 
             // Assert
-            act.ShouldNotThrow();
+            act.Should().NotThrow();
         }
 
         [Test]
@@ -90,7 +90,7 @@ namespace FluentAssertions.Ioc.Ninject.Tests
             Action act = () => kernel.Should().Resolve<ISomeFactory>().WithAtLeastOneInstance();
 
             // Assert
-            act.ShouldThrow<AssertionException>();
+            act.Should().Throw<AssertionException>();
         }
 
         [Test]
@@ -105,7 +105,7 @@ namespace FluentAssertions.Ioc.Ninject.Tests
             Action act = () => kernel.Should().Resolve(interfaces).WithAtLeastOneInstance();
 
             // Assert
-            act.ShouldNotThrow();
+            act.Should().NotThrow();
         }
 
         [Test]
@@ -120,7 +120,7 @@ namespace FluentAssertions.Ioc.Ninject.Tests
             Action act = () => kernel.Should().Resolve(interfaces).WithAtLeastOneInstance();
 
             // Assert
-            act.ShouldThrow<AssertionException>();
+            act.Should().Throw<AssertionException>();
         }
 
         [Test]
@@ -134,7 +134,7 @@ namespace FluentAssertions.Ioc.Ninject.Tests
             Action act = () => kernel.Should().Resolve(interfaces).WithSingleInstance();
 
             // Assert
-            act.ShouldNotThrow();
+            act.Should().NotThrow();
         }
 
         [Test]
@@ -150,7 +150,7 @@ namespace FluentAssertions.Ioc.Ninject.Tests
             Action act = () => kernel.Should().Resolve(interfaces).WithSingleInstance();
 
             // Assert
-            act.ShouldThrow<AssertionException>();
+            act.Should().Throw<AssertionException>();
         }
 
         [Test]
@@ -163,7 +163,7 @@ namespace FluentAssertions.Ioc.Ninject.Tests
             Action act = () => kernel.Should().Resolve<IFooService>().To<FooService>();
 
             // Assert
-            act.ShouldNotThrow();
+            act.Should().NotThrow();
         }
 
         [Test]
@@ -176,7 +176,7 @@ namespace FluentAssertions.Ioc.Ninject.Tests
             Action act = () => kernel.Should().Resolve<IFooService>().To<FooService2>();
 
             // Assert
-            act.ShouldThrow<AssertionException>().And.Message.Should().Be(@"Expected interface ""IFooService"" to resolve to type ""FooService2"", but found ""FooService"" instead");
+            act.Should().Throw<AssertionException>().And.Message.Should().Be(@"Expected interface ""IFooService"" to resolve to type ""FooService2"", but found ""FooService"" instead");
         }
 
         private IKernel GetKernel()

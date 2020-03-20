@@ -1,29 +1,30 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentAssertions.Ioc.Ninject", "src\FluentAssertions.Ioc.Ninject\FluentAssertions.Ioc.Ninject.csproj", "{AD22C140-1E9F-4D70-9B01-34E18915009A}"
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29911.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentAssertions.Ioc.Ninject", "src\FluentAssertions.Ioc.Ninject\FluentAssertions.Ioc.Ninject.csproj", "{AD22C140-1E9F-4D70-9B01-34E18915009A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{2D35AF97-45F9-4325-B681-62BCFF204A60}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\NuGet.Config = .nuget\NuGet.Config
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 	EndProjectSection
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentAssertions.Ioc.Ninject.Tests", "src\FluentAssertions.Ioc.Ninject.Tests\FluentAssertions.Ioc.Ninject.Tests.csproj", "{D5A95789-04BC-4ADD-871F-D7073EB85A9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentAssertions.Ioc.Ninject.Tests", "src\FluentAssertions.Ioc.Ninject.Tests\FluentAssertions.Ioc.Ninject.Tests.csproj", "{D5A95789-04BC-4ADD-871F-D7073EB85A9E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentAssertions.Ioc.Samples.Core", "src\FluentAssertions.Ioc.Samples.Core\FluentAssertions.Ioc.Samples.Core.csproj", "{789DEF70-FAD8-431F-B2BA-0C2A21F5C161}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentAssertions.Ioc.Samples.Core", "src\FluentAssertions.Ioc.Samples.Core\FluentAssertions.Ioc.Samples.Core.csproj", "{789DEF70-FAD8-431F-B2BA-0C2A21F5C161}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentAssertions.Ioc.Samples.Interfaces", "src\FluentAssertions.Ioc.Samples.Interfaces\FluentAssertions.Ioc.Samples.Interfaces.csproj", "{B113663C-3031-4D08-9755-ED73D901ACB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentAssertions.Ioc.Samples.Interfaces", "src\FluentAssertions.Ioc.Samples.Interfaces\FluentAssertions.Ioc.Samples.Interfaces.csproj", "{B113663C-3031-4D08-9755-ED73D901ACB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentAssertions.Ioc.Samples.Data", "src\FluentAssertions.Ioc.Samples.Data\FluentAssertions.Ioc.Samples.Data.csproj", "{BFFF0D07-65E9-48C0-8AEB-3047B4EDF39C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentAssertions.Ioc.Samples.Data", "src\FluentAssertions.Ioc.Samples.Data\FluentAssertions.Ioc.Samples.Data.csproj", "{BFFF0D07-65E9-48C0-8AEB-3047B4EDF39C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentAssertions.Ioc.Samples.Entities", "src\FluentAssertions.Ioc.Samples.Entities\FluentAssertions.Ioc.Samples.Entities.csproj", "{E43560ED-E4AA-42C0-AA9C-5830DBF57531}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentAssertions.Ioc.Samples.Entities", "src\FluentAssertions.Ioc.Samples.Entities\FluentAssertions.Ioc.Samples.Entities.csproj", "{E43560ED-E4AA-42C0-AA9C-5830DBF57531}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{2EC05648-5418-4209-A0B2-231109B4177E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentAssertions.Ioc.Ninject.SampleTests", "src\FluentAssertions.Ioc.Ninject.SampleTests\FluentAssertions.Ioc.Ninject.SampleTests.csproj", "{D8C61DAC-0BDD-42A2-9153-36582A8BA1B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentAssertions.Ioc.Ninject.SampleTests", "src\FluentAssertions.Ioc.Ninject.SampleTests\FluentAssertions.Ioc.Ninject.SampleTests.csproj", "{D8C61DAC-0BDD-42A2-9153-36582A8BA1B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentAssertions.Ioc.Ninject.Sample", "src\FluentAssertions.Ioc.Ninject.Sample\FluentAssertions.Ioc.Ninject.Sample.csproj", "{3857B7DD-45EA-4AC3-97D3-CE9DBB9B64BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentAssertions.Ioc.Ninject.Sample", "src\FluentAssertions.Ioc.Ninject.Sample\FluentAssertions.Ioc.Ninject.Sample.csproj", "{3857B7DD-45EA-4AC3-97D3-CE9DBB9B64BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -68,11 +69,14 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{789DEF70-FAD8-431F-B2BA-0C2A21F5C161} = {2EC05648-5418-4209-A0B2-231109B4177E}
 		{B113663C-3031-4D08-9755-ED73D901ACB3} = {2EC05648-5418-4209-A0B2-231109B4177E}
 		{BFFF0D07-65E9-48C0-8AEB-3047B4EDF39C} = {2EC05648-5418-4209-A0B2-231109B4177E}
 		{E43560ED-E4AA-42C0-AA9C-5830DBF57531} = {2EC05648-5418-4209-A0B2-231109B4177E}
-		{789DEF70-FAD8-431F-B2BA-0C2A21F5C161} = {2EC05648-5418-4209-A0B2-231109B4177E}
 		{D8C61DAC-0BDD-42A2-9153-36582A8BA1B4} = {2EC05648-5418-4209-A0B2-231109B4177E}
 		{3857B7DD-45EA-4AC3-97D3-CE9DBB9B64BD} = {2EC05648-5418-4209-A0B2-231109B4177E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {740FB59C-4F2B-4743-B836-64E31A84E125}
 	EndGlobalSection
 EndGlobal
