@@ -7,6 +7,13 @@
     <Version>1.4.0</Version>
     <Authors>Kevin Kuszyk</Authors>
     <Copyright>Copyright © Kevin Kuszyk 2020</Copyright>
+    <RequireLicenseAcceptance>false</RequireLicenseAcceptance>
+    <PackageDescription>Extensions for Fluent Assertions for testing Ninject bindings.</PackageDescription>
+    <PackageReleaseNotes>See https://github.com/kevinkuszyk/FluentAssertions.Ioc.Ninject/releases</PackageReleaseNotes>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/kevinkuszyk/FluentAssertions.Ioc.Ninject/master/license.txt</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/kevinkuszyk/FluentAssertions.Ioc.Ninject</PackageProjectUrl>
+    <PackageTags>FluentAssertions Ninject IOC TDD Fluent Testing</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
   
   <ItemGroup>
