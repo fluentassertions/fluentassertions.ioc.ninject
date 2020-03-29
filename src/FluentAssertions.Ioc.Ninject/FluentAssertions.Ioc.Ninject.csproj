@@ -4,7 +4,7 @@
     <OutputType>Library</OutputType>
     <TargetFrameworks>net47;netcoreapp2.1;netcoreapp3.0;netstandard2.0;netstandard2.1</TargetFrameworks>
     <RestorePackages>true</RestorePackages>
-    <Version>1.4.0</Version>
+    <Version>1.5.0</Version>
     <Authors>Kevin Kuszyk</Authors>
     <Copyright>Copyright © Kevin Kuszyk 2020</Copyright>
     <RequireLicenseAcceptance>false</RequireLicenseAcceptance>
